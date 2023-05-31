@@ -21,4 +21,6 @@ const loadToDoIntoBody = (toDoItem) => {
 
 
 //after you add a new todo to a project
-const loadNewToDoIntoBOdy;
+// const loadNewToDoIntoBOdy;
+
+export {loadToDoIntoBody};

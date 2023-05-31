@@ -49,3 +49,5 @@ const changeDueDate = (title, newDate) => {
 const changePriority = (title, newPriority) => {
     title.priority(newPriority);
 };
+
+export {createToDo, changeDueDate, changePriority};

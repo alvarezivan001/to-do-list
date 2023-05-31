@@ -3,11 +3,23 @@
 //changes will be handled by controller?
 
 //when created
-const loadProjectIntoDOM;
+const loadProjectIntoDOM = (project) => {
+    const projectNode = document.createElement('li');
+    projectNode.setAttribute('id', project.title);
+    projectNode.setAttribute('class', 'projects');
+    projectNode.textContent = project.title;
+
+    const addProjectNode = document.getElementById('new-project');
+    const projectsList = document.getElementById('projects-list');
+
+    projectsList.insertBefore(projectNode, addProjectNode);
+};
 
 //when deleted
-const removeProjectFromDOM;
+// const removeProjectFromDOM;
 
 
-// when page is loaded
-const loadProjectPanel;
+// // when page is loaded
+// const loadProjectPanel;
+
+export {loadProjectIntoDOM};

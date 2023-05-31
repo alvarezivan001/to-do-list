@@ -39,3 +39,5 @@ const addToProject = (title, toDo) => {
 const removeFromProject = (title, index) => {
     title.removeToDo(index);
 };
+
+export { newProject, addToProject, removeFromProject};
