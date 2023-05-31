@@ -4,7 +4,7 @@
 //array items should be addable and removable
 //removing array items should handled by DOM
 
-//function to create project ob
+//function to create project obj
 //changing title to be implemented later possibly
 
 class Project {
