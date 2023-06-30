@@ -4,7 +4,7 @@
 
 //when created
 const loadProjectIntoDOM = (project) => {
-    const projectNode = document.createElement('li');
+    const projectNode = document.createElement('button');
     projectNode.setAttribute('id', project.title);
     projectNode.setAttribute('class', 'projects');
     projectNode.textContent = project.title;
@@ -17,6 +17,7 @@ const loadProjectIntoDOM = (project) => {
 
 //when deleted
 // const removeProjectFromDOM;
+// when 
 
 
 // // when page is loaded

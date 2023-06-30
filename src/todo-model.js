@@ -36,6 +36,9 @@ class ToDo {
     set priority(value) {
         this._priority = value;
     }
+    set details(value) {
+        this._details = value;
+    }
 };
 
 const createToDo = (title, details, project, dueDate, priority) => {
@@ -49,5 +52,8 @@ const changeDueDate = (title, newDate) => {
 const changePriority = (title, newPriority) => {
     title.priority(newPriority);
 };
+const changeDetails = (title, newDetails) => {
+    title.details(newDetails);
+};
 
-export {createToDo, changeDueDate, changePriority};
+export {createToDo, changeDueDate, changePriority, changeDetails};

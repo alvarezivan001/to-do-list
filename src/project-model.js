@@ -33,11 +33,11 @@ const newProject = (title) => {
     return new Project(title);
 };
 
-const addToProject = (title, toDo) => {
-    title.addToDo(toDo);
+const addToProject = (project, toDo) => {
+    project.addToDo(toDo);
 };
-const removeFromProject = (title, index) => {
-    title.removeToDo(index);
+const removeFromProject = (project, index) => {
+    project.removeToDo(index);
 };
 
 export { newProject, addToProject, removeFromProject};
