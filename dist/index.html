@@ -1,36 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
+
 <body>
-<div class="sections" id="header">
+  <div id="header">
+        <img id="logo" src="logo.svg">
+        <div id="logoText">Do ItTo It</div>
+  </div>
 
-</div>
-<div class="sections" id="main">
-    <div class="parts" id="panel">
-        <div id="projects">Projects:</div>
-        <div id="projects-list">
-            <!-- <button id="default">Default</button> -->
-            <button id="new-project">+ add new project</button>
-            <button id="notes">Notes</button>          
+  <div id="main">
+        <div class="parts" id="panel">
+              <div id="projects">Projects
+                    <img id="projectImg" src="project.svg">             
+              </div>
+                    <div id="projectsList">
+
+                          <button type="button" id="newProject" >+ add project</button>
+                          <!-- <form id="projectForm"> -->
+                          <input type="text" id="projectName" name="projectName" required>
+                          <div id="projectButtonContainer">
+                                <button type="button" id="projectCancel">Cancel</button>
+                                <button type="button" id="projectEnter">Enter</button>
+                          </div>
+                                 
+                          <!-- </form> -->
+                    </div>
+              <button type="button" id="notesButton">Notes
+                      <img id="notesImg" src="note.svg">
+              </button>
         </div>
-        <div id="notes">Notes</div>
-    </div>
-    <div class="parts" id="body">
-        <div id="project">name or title</div>
-        <ul id="items-list">
-            <li id="new-item">+ add new task</li>
-        </ul>
-    </div>
-</div>
-<div class="sections" id="footer">
+        <div class="parts" id="body">
+              <div id="projectHeader">Default</div>
+                    <ul id="itemsList">
 
-</div>
+                        <li id="newItem">
+                            <button id="newItemButton" type="button">+ add new Item
+                            </button>
+                            <div id="itemPrompt"> 
+                                    <form id="itemPromptForm">
+                                          <label for="newItemName">Title:</label><br>
+                                          <input type="text" id="newItemName" name="newItemName" required minlength="3"/><br>
+                                          <label for="newDetails">Details (optional):</label><br>
+                                          <textarea type="text" id="newDetails" name="newDetails"></textarea><br>
+                                          <label for="newDueDate">DueDate:</label>
+                                          <input type="date" id="newDueDate" name="newDueDate" required /><br>
+                                          <div>
+                                                <label for="newPriority">Priority:</label><br>
+                                                <select id="newPriority" name="newPriority" required >
+                                                      <option value="high">high</option>
+                                                      <option value="medium">medium</option>
+                                                      <option value="low">low</option>
+                                                </select>
+                                                <button type="button" id="itemCancel">Cancel</button>
+                                                <button type="submit" id="itemEnter">Enter</button>    
+                                    </form>                      
+                                </div>                          
+                            </div>
+                        </li>
+                    </ul>
+        </div>
+
+        <!-- <div class="parts" id="notes">
+              <div id="notesContainer">
+                    <div class="note" contenteditable="true">
+                          <button class="deleteNote" contenteditable="false">x 
+                          </button>
+                          <div class="noteContent">This is an example note 
+                          </div>
+                    </div>
+                    <div class="note" contenteditable="true">
+                          <button class="deleteNote" contenteditable="false">x                 
+                          </button>
+                          <div class="noteContent">You can edit these notes
+                          </div>
+                    </div>
+                   <button class="note" id="newNote">+ New Note</button>
+              </div>
+        </div> -->
+  </div>
+  
+  <div id="footer">
+  </div>
+
+
+
+  <script src="main.js"></script>
 </body>
-<script src="main.js"></script>
+
 </html>
