@@ -1,52 +1,277 @@
-
-
-body {
+html {
+    height: 100%;
+    width: 100%;
+  }
+  
+  
+  
+  body {
     display: grid;
     grid-template-rows: 2fr 11fr 1fr;
   
-}
-body, html {
+  }
+  
+  body,
+  html {
     margin: 0;
     height: 100%;
-}
-
-#header {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  #header {
     grid-column: 1 2;
-    background-color: rgb(55, 55, 240);
-}
-#footer {
+    background-color: rgb(83, 126, 255);
+    display: flex;
+    border-bottom: 1px gray solid;
+    padding: 0px 40px;
+    align-items: center;
+  }
+  img{
+    filter: invert(1);
+  }
+  #logo {
+    width: 100px;
+    filter: invert(1);
+  }
+  #logoText{
+    font-weight: 900;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    height:fit-content;
+    
+  }
+  
+  
+  #footer {
     grid-column: 3 4;
-    background-color: rgb(55, 55, 240);
-}
-#main {
+    background-color: rgb(83, 126, 255);
+    border-top: 1px gray solid;
+  }
+  
+  #main {
     grid-column: 2 3;
     display: grid;
-    grid-template-columns: 1fr 4fr;
-}
-#panel {
-    background-color: rgb(138, 138, 246);
-}
-
-
-/* added after vacation */
-
-button {
+    grid-template-columns: 1fr 3.5fr;
+    
+  }
+  
+  #panel {
+    background-color: rgb(141, 169, 255);
+    color: white;
+    padding: 10px;
+    font-weight: 800;
+    font-size: 36px;
+    -webkit-text-stroke: 1px gray; 
+    border-right: solid gray 1px;
+  }
+  
+  #projectsList {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 5px;
+    justify-content: space-between;
+  }
+  #projects {
+    border-bottom: 2px white solid;
+  }
+  #projectImg {
+    width: 36px;
+    filter: invert(1);
+    position: relative;
+    top: 5px;
+  }
+  .project, #newProject, #notesButton {
+    font-size: 20px;
+    font-weight: 900;
+    text-align: start;
+    background: none;
+    color: white;
+    border: none;
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+  }
+  .project:hover, #newProject:hover, #notesButton:hover{
+    background-color: rgb(92, 132, 252);
+  }
+  .projectDelete {
+    color: lightpink;
+    -webkit-text-stroke: 0px; 
+  }
+  .projectDelete:hover{
+    color: black;
+    
+  }
+  #newProject {
+    text-align: center;
+    margin-top: 15px;
+    
+  }
+  #projectName {
+    width: 90%;
+    line-height: 1.5em;
+    display: none;
+  }
+  #projectButtonContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+  #projectCancel, #projectEnter {
+    font-size: 24px;
+    background-color: rgb(92, 132, 252);
+    border: none;
+    color: white;
+  
+    -webkit-text-stroke: 0px; 
+  }
+  
+  #notesButton {
+    font-size: 36px;
+    font-weight: 700;
+    width: 100%;
+  }
+  #notesImg {
+    width: 36px;
+    position: relative;
+    top: 5px;
+  }
+  
+  /* added after vacation */
+  
+  /* button {
     border: none;
     background: none;
-}
- li {
+  } */
+  
+  #body, #notes{
+    padding: 20px 60px;
+  }
+  
+  #projectHeader {
+  
+    font-weight: 900;
+    font-size: 36px;
+    border-bottom: solid 5px;
+    border-color: rgb(83, 126, 255);
+  }
+  
+  
+  
+  
+  
+  li {
     border: green 1px solid;
     display: flex;
-    justify-content: space-evenly;
- }
-.priority.high {
+    justify-content: space-between;
+    margin: 5px;
+    border: solid 2px rgb(83, 126, 255);
+    font-size: 16px;
+    
+    
+  }
+  li > div {
+    margin: 5px;
+  }
+  
+  .priority.high {
     background-color: red;
-    padding: 10px;
-}
-.priority.medium {
+    padding: 5px;
+    margin: 0px;
+  
+  }
+  
+  .priority.medium {
     background-color: orange;
     padding: 5px;
-}
-.priority.low {
-    padding: 0px;
-}
+    margin: 0px;
+  }
+  
+  .priority.low {
+    padding: 5px;
+    background-color: rgb(83, 126, 255);
+    margin: 0px;
+  }
+  .itemTitle {
+    flex-basis: 100px;
+  }
+  .dueDate {
+    flex-basis: 150px;
+    border: none;
+  }
+  .details {
+    flex-basis: 300px;
+    font-size: 12px;
+    color: grey; 
+  }
+  .delete {
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+  }
+  
+  
+  
+  
+  
+  
+  
+  #itemPrompt {
+    width: auto;
+    display: none;
+    
+    
+  }
+  #newItem {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+  
+    border: solid 2px rgb(83, 126, 255);
+    
+  }
+  input, textarea {
+    width: 100%;
+    line-height: 1.5em;
+    font-size: 16px;
+  }
+  label {
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  
+  
+  
+  #notesContainer {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+    
+  }
+  
+  .note {
+    background-color: rgb(83, 126, 255);
+    
+    padding: 25px 10px;
+    font-size: 20px;
+    color: white;
+    height: fit-content;
+    min-height: 2em;
+    width: 13em;
+    border-radius: 8px;
+    
+    position: relative;
+  }
+  .deleteNote {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    font: inherit;
+    color: white;
+    background-color: transparent;
+    border: none;
+  }     
